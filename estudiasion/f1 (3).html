@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <script type="text/javascript">
+        function validar()
+       {var  codprod = document.formulario.txt_codprod.value
+        var  prod = document.formulario.txt_prod.value
+        var  paisproce = document.formulario.txt_paisproce.value
+        var  precio = document.formulario.txt_precio.value
+        var  numtienda = document.formulario.number_codprod.value
+
+        if (codprod==('A') | codprod==('X') | codprod==('O'))
+            {
+                alert("Please enter a valid email"); 
+                document.formulario.txt_correo.focus();
+                return false;
+            }
+
+       }
+
+    </script>
+
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-xs-12 col-sm-6">
+            <form>
+                <h1>formulario ingreso de producto</h1>
+                <label for="">codigo de producto</label>
+                <input type="text" class="form-control" id="txt_nombre">
+
+                <label for="">producto</label><br>
+                <select name="opt_nombre" id="opt_producto" class="form-select">
+                    <option value=""></option>
+                    <option value="pintura latex"> pintura latex</option>
+                    <option value="brocha"> brocha</option>
+                </select><br>
+                <label for="">pais de procedencia</label>
+                <input type="text" class="form-control" name="txt_pais" id="pais">
+
+                <label for="">precio</label>
+                <input type="text" class="form-control" name="txt_precio" id="precio">
+
+                <label for="">dimensiones</label>
+                <input type="text" class="form-control" name="txt_dimensiones" id="dimensiones">
+
+                <label for="">numero tienda</label>
+                <input type="number" class="form-control" name="txt_numero_tienda" id="txt_numero_tienda">
+                
+                <label for="">descripcion</label>
+                <textarea class="form-control" name="txa_descripcion" id="txa_descripcion" cols="30" rows="5"></textarea>
+
+
+                
+            </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

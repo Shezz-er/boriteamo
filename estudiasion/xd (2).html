@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function validar()
+
+    // <!-- (indexof dentro de correo existe sale positivo si no sale negativo indexos es busca este caracter, si no lo ecneuntra madna negativo si lo encuentra psoitivo 
+        // false false= false
+        // true false = true 
+        // false true =true ) -->
+//  esto se puede poner en otro script para que sea mas limpio y se le puede referenciar con un src
+        {
+            var nombre = document.formulario.txt_nombre.value
+            var edad = document.formulario.txt_edad.value
+            if (nombre.length > 3)
+                {
+                    alert("Please enter a valid lenght number");
+                    document.formulario.txt_nombre.focus();
+                    return false;
+                }
+            if (parseInt(edad)<18 || parseInt(edad)>65)
+                {
+                    alert("Please enter a valid number");
+                    document.formulario.txt_edad.focus();
+                    //  focus es para que muestre donde falto el dato listao para tipear
+                    return false;
+                }
+            if (correo.indexOf('@')<0 || correo.indexOf('.')<0)   
+            // si el en el index el correo es menor a 0
+            {
+                alert("Please enter a valid email"); 
+                document.formulario.txt_correo.focus();
+                return false;
+            }
+                
+            document.formulario.action = "http://www.pagina.com"
+            document.formulario.submit() = true
+        }
+    //     ana@mail.cl
+    //   -101234568910
+    //     idex de "@" es 3 osea que es +<0 numero
+    //     pero  si no lo encuentra seria -1 porque no esta dentro del index que es positivo 
+    </script>
+</head>
+<body>
+    <form action="#" method="post" name="formulario" id="formulario"> <br>
+        nombre
+        <input type="text" name="txt_nombre" id="txt_nombre"> <br>
+        edad
+        <input type="text" name="txt_edad" id="txt_edad"> <br>
+        correo
+        <input type="text" name="txt_correo" id="txt_correo"> <br>
+    </form>
+    
+</body>
+</html>

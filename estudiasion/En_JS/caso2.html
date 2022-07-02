@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+          var valor1 = prompt("Ingrese numero")
+          var valor2 = prompt("Ingrese otro número")
+          var opcion = prompt("1.Al Cuadrado 2.Al cubo 3.Exponenciar  seleccione:")
+          switch (parseInt(opcion)) {
+            case 1:  resultado = Math.pow(parseFloat(valor1),2)
+                     alert(valor1+" al cuadrado es "+resultado)
+                     resultado = Math.pow(parseFloat(valor2),2)
+                     alert(valor2+" al cuadrado es "+resultado)
+                     break;
+             case 2: resultado = Math.pow(parseFloat(valor1),3)
+                     alert(valor1+" al cubo es "+resultado)
+                     resultado = Math.pow(parseFloat(valor2),3)
+                     alert(valor2+" al cubo es "+resultado)
+                     break;
+             case 3:  resultado = Math.pow(parseFloat(valor1),parseFloat(valor2))
+                      alert(valor1+" elevado a "+valor2+" es:"+resultado)
+                      break;
+            default: alert("Opción es incorrecta"); break;
+          }
+    </script>
+</body>
+</html>
